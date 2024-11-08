@@ -86,7 +86,13 @@ function start() {
     }
     init()
     loop()
-    function setPos({layerX, layerY}) {
+    function setPos({layerX, layerY, touches}) {
+
+        if (touches) {
+            mouse.x = touches[0].clientX
+            mouse.y = touches[0].clientY
+        }
+
         mouse.x = layerX
         mouse.y = layerY
     }
