@@ -96,5 +96,9 @@ function start() {
     canvas.addEventListener('mousemove', setPos)
     window.addEventListener('mousedown', isDown)
     window.addEventListener('mouseup', isDown)
+
+    canvas.addEventListener('touchmove', setPos)
+    window.addEventListener('touchstart', isDown)
+    window.addEventListener('touchend', isDown)
 }
 start()
